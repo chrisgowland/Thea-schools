@@ -105,9 +105,11 @@
           <span class="tag unknown">Drive: ~${s.travel.drive_mins_est} min</span>
         </div>
         <p><strong>Location:</strong> ${s.town}, ${s.postcode}</p>
+        <p><strong>School size:</strong> ${s.school_size_pupils ?? "Not published"} pupils (${s.school_size_band})</p>
         <p><strong>Latest inspection published:</strong> ${s.latest_inspection_published}</p>
         <p><strong>Social media:</strong> ${s.social_media}</p>
         <p><strong>Travel:</strong> ${s.travel.walkCycle}; ${s.travel.publicTransport}</p>
+        <p><strong>School bus route:</strong> ${s.bus_route_detail}</p>
         <p class="links">
           <a href="${s.ofsted_url}" target="_blank" rel="noopener">Ofsted report</a>
           ${website ? `<a href="${website}" target="_blank" rel="noopener">School website</a>` : ""}
@@ -159,4 +161,9 @@
   renderSummary();
   renderSports();
   renderSchools();
+
+  const footer = document.querySelector(".footer p");
+  if (footer && data.route_method) {
+    footer.textContent = `Data sources: Schools Insight (GIAS-derived), Ofsted reports, Postcodes.io geolocation, venue websites, and ${data.route_method}.`;
+  }
 })();
