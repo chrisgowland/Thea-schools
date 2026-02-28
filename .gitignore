@@ -1,0 +1,20 @@
+﻿# Generated/data scratch files
+*.log
+*.err.log
+*.html
+schools.json
+school_review_*.json
+school_review_*.csv
+chunk.js
+cloudflared.exe
+
+# Tooling folders not needed for site publish
+_bmad/
+_bmad-output/
+.claude/
+
+# Keep actual site files
+!index.html
+!styles.css
+!app.js
+!school_data.js

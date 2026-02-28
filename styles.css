@@ -1,0 +1,221 @@
+﻿:root {
+  --bg: #fff9ef;
+  --panel: #ffffff;
+  --ink: #2a2a44;
+  --muted: #5f6387;
+  --sun: #ffd166;
+  --coral: #ff7b7b;
+  --mint: #7be0c2;
+  --sky: #7ec8ff;
+  --violet: #8f87ff;
+  --line: #ece8ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 12% 15%, #fff2bf 0 15%, transparent 40%), radial-gradient(circle at 90% 20%, #dff4ff 0 18%, transparent 45%), var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-shape {
+  position: fixed;
+  z-index: -1;
+  border-radius: 999px;
+  opacity: 0.35;
+  filter: blur(2px);
+}
+.bg-shape-1 {
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(140deg, var(--mint), var(--sky));
+  right: -70px;
+  top: 24%;
+}
+.bg-shape-2 {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(140deg, #ffd9a0, #ffb7c9);
+  left: -70px;
+  bottom: 16%;
+}
+
+.wrap {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 2.4rem 0 1.2rem;
+}
+.eyebrow {
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: var(--sun);
+  font-weight: 800;
+}
+h1, h2, h3 {
+  font-family: "Baloo 2", cursive;
+  line-height: 1.05;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin: 0.6rem 0 0.2rem;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+.hero-meta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  padding: 1rem;
+  margin: 0.9rem 0;
+  box-shadow: 0 8px 22px rgba(39, 38, 82, 0.06);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 0.7rem;
+}
+.kpi {
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  background: #f9f8ff;
+  border: 1px dashed #dfdcff;
+}
+.kpi span {
+  display: block;
+  font-size: 1.5rem;
+  color: #38336d;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+input, select {
+  border: 1px solid #d9d3ff;
+  border-radius: 0.65rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  background: #fff;
+}
+.result-count {
+  margin: 0.8rem 0;
+  color: var(--muted);
+}
+
+.school-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 0.85rem;
+}
+.card {
+  border-radius: 0.9rem;
+  border: 1px solid var(--line);
+  padding: 0.8rem;
+  background: #fff;
+}
+.card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.2rem;
+}
+.card p {
+  margin: 0.15rem 0;
+}
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+.tag {
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.tag.good { background: #def7ea; color: #175c38; border-color: #bfe9d1; }
+.tag.outstanding { background: #d7efff; color: #11496e; border-color: #b9dfff; }
+.tag.ri { background: #fff1c7; color: #6d5614; border-color: #ffe18a; }
+.tag.inadequate { background: #ffdede; color: #7a1f1f; border-color: #ffc3c3; }
+.tag.unknown { background: #ededf8; color: #464678; border-color: #d9d9f2; }
+.links a {
+  color: #3056c9;
+  text-underline-offset: 2px;
+  margin-right: 0.8rem;
+}
+
+.sports-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+.sport-card {
+  border: 1px solid #ffe3b6;
+  background: #fffdf8;
+  border-radius: 0.85rem;
+  padding: 0.8rem;
+}
+.sport-card h3 {
+  margin: 0 0 0.25rem;
+}
+.sport-card p {
+  margin: 0.18rem 0;
+}
+.sport-card a { color: #b44e00; }
+
+.sports-note {
+  margin-top: 0.8rem;
+  border-radius: 0.85rem;
+  border: 1px dashed #ffd5a8;
+  background: #fff8ed;
+  padding: 0.8rem;
+}
+.sports-note ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.footer {
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 0.8rem 0 1.8rem;
+}
+
+@media (max-width: 640px) {
+  .panel { padding: 0.85rem; }
+  .card h3 { font-size: 1.12rem; }
+}

@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educating Thea</title>
+  <meta name="description" content="Primary school options near DL8 4DR with Ofsted, social media, travel, and sports facilities context." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Educating Thea</p>
+      <h1>Primary school planning for DL8 4DR</h1>
+      <p class="subtitle">A cheerful, practical guide to 57 schools within 20 miles, built for early decision-making while Thea is age 2.</p>
+      <div class="hero-meta" id="heroMeta"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel summary" id="summary"></section>
+
+    <section class="panel filters">
+      <h2>Compare Schools</h2>
+      <div class="filter-grid">
+        <label>
+          School or town
+          <input id="searchInput" type="search" placeholder="Type a school name or town" />
+        </label>
+        <label>
+          Ofsted
+          <select id="gradeFilter">
+            <option value="all">All grades</option>
+            <option value="Outstanding">Outstanding</option>
+            <option value="Good">Good</option>
+            <option value="Requires Improvement">Requires Improvement</option>
+            <option value="Inadequate">Inadequate</option>
+            <option value="Not found">Not found</option>
+          </select>
+        </label>
+        <label>
+          Max distance
+          <select id="distanceFilter">
+            <option value="20">Within 20 miles</option>
+            <option value="10">Within 10 miles</option>
+            <option value="6">Within 6 miles</option>
+          </select>
+        </label>
+      </div>
+      <p id="resultCount" class="result-count"></p>
+      <div id="schoolCards" class="school-cards"></div>
+    </section>
+
+    <section class="panel sports">
+      <h2>Sports Facilities</h2>
+      <p class="section-intro">These nearby facilities can help build a wider activity plan beyond school PE. Distances are from DL8 4DR and are approximate.</p>
+      <div id="sportsCards" class="sports-cards"></div>
+      <div class="sports-note">
+        <h3>How to use this with school visits</h3>
+        <ul>
+          <li>Ask each school what weekly PE and after-school sport they run for Reception and Key Stage 1.</li>
+          <li>Check if wraparound care can connect with local clubs/swim lessons.</li>
+          <li>Use home-to-school travel time plus one nearby community facility as your baseline routine test.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel timeline">
+      <h2>Admission Timing</h2>
+      <p>Reception usually starts in September after a child turns 4. For a child aged 2 on <strong>28 February 2026</strong>, likely entry points are <strong>September 2027</strong> or <strong>September 2028</strong>, depending on date of birth.</p>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>Data sources: Schools Insight (GIAS-derived), Ofsted reports, Postcodes.io geolocation, and venue websites.</p>
+  </footer>
+
+  <script src="school_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
